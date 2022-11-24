@@ -7,7 +7,14 @@ function getComputerChoise()
 
 function getPlayerChoise()
 {
-    return prompt("Choose: Rock / Paper / Scissors ?");
+    let input = prompt("Choose: Rock / Paper / Scissors ?");
+
+    if((input === null) || (showChoise(input) === "Wrong input!"))
+    {
+        alert("Canceled");
+    }
+
+    return input;
 }
 
 function showChoise(choise)
