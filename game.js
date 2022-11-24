@@ -11,7 +11,7 @@ function getPlayerChoise()
 
     if((input === null) || (showChoise(input) === "wrong input"))
     {
-        alert("Canceled");
+        alert("Input is not right.");
     }
 
     return input;
@@ -40,11 +40,8 @@ function showChoise(choise)
     }
 }
 
-function playRound(playerSelection, computerSelection)
+function playRound(player, computer)
 {
-    let player = showChoise(playerSelection);
-    let computer = showChoise(computerSelection);
-
     console.log(`You choose ${player}`);
     console.log(`Computer choose ${computer}`);
 
@@ -52,13 +49,13 @@ function playRound(playerSelection, computerSelection)
      || (player === "Paper" && computer === "Paper")
      || (player === "Scissors" && computer === "Scissors"))
     {
-        return "Tie";
+        return "tie";
     }
     else if ((player === "Rock" && computer === "Paper")
           || (player === "Paper" && computer === "Scissors")
           || (player === "Scissors" && computer === "Rock"))
     {
-        return "Lose";
+        return "lose";
     }
     else if (player === "wrong input")
     {
@@ -69,3 +66,45 @@ function playRound(playerSelection, computerSelection)
         return "win";
     }
 }
+
+function game()
+{
+    let player;
+    let computer;
+    let playerScore = 0;
+    let computerScore = 0;
+    let result;
+    
+    for (let i = 0; i < 5; ++i)
+    {
+        player = showChoise(getPlayerChoise());
+        computer = showChoise(getComputerChoise());
+        result = playRound(player, computer);
+
+        if (result === "win")
+        {
+            ++playerScore;
+        }
+        else if (result === "lose")
+        {
+            ++computerScore;
+        }
+
+        console.log(`Round ${i + 1}: Your score = ${playerScore}, Computer score = ${computerScore}`);
+    }
+
+    if (playerScore === computerScore)
+    {
+        console.log("Tie");
+    }
+    else if (playerScore > computerScore)
+    {
+        console.log("Player win!");
+    }
+    else
+    {
+        console.log("Computer win!");
+    }
+}
+
+console.log(game());
