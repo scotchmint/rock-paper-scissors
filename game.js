@@ -10,31 +10,25 @@ function getPlayerChoise()
     return prompt("Choose: Rock / Paper / Scissors ?");
 }
 
-function showComputerChoise(computerSelection)
+function showChoise(choise)
 {
-    switch (computerSelection)
+    if (typeof choise === 'string')
     {
-        case 0:
-            return "Rock";
-        case 1:
-            return "Paper";
-        case 2:
-            return "Scissors";
+        choise = choise.toLowerCase();
     }
-}
 
-function showPlayerChoise(playerSelection)
-{
-    playerSelection = playerSelection.toLowerCase();
-    switch (playerSelection)
+    switch (choise)
     {
         case "rock":
-            return 0;
+        case 0:
+            return "Rock";
         case "paper":
-            return 1;
+        case 1:
+            return "Paper";
         case "scissors":
-            return 2;
+        case 2:
+            return "Scissors";
         default:
-            alert("Wrong input");
+            return "Wrong input!";
     }
 }
