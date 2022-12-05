@@ -29,6 +29,8 @@ const computerResult = document.querySelector('.computer-result');
 const roundResult = document.querySelector('.round-result');
 const finalResult = document.querySelector('.final-result');
 
+function game()
+{
 let playerScore = 0;
 let computerScore = 0;
 
@@ -39,10 +41,9 @@ function playRound()
 {
     let computerChoise = showChoiseInString(getComputerChoise());
 
-    // player win scenario
     if (playerScore < 5 && computerScore < 5)
     {
-
+        // player win scenario
         if (this === rock && computerChoise === 'scissors')
         {
         ++playerScore;
@@ -113,3 +114,6 @@ paper.addEventListener('click', playRound);
 scissors.addEventListener('click', playRound);
 
 playAgain.addEventListener('click', () => location.reload());
+}
+
+game();
