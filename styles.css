@@ -1,0 +1,30 @@
+body {
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-reset {
+    background-color: tomato;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.hide {
+    display: none;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid;
+    padding: 10px;
+    margin: 5px;
+}
