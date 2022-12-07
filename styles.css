@@ -1,12 +1,35 @@
+html {
+    font-family: 'Caveat', 'cursive', 'Roboto', sans-serif;
+}
+
 body {
-    background-color: wheat;
+    background-color: teal;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    background-color: darkslategray;
+    color: yellow;
+    margin: 0;
+    padding: 25px;
+    font-size: xxx-large;
+}
+
+.container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    margin: 50px;
 }
 
 .btn-again {
     background-color: tomato;
+    border-radius: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    font-size: xxx-large;
 }
 
 .buttons {
@@ -16,7 +39,7 @@ body {
     padding: 15px;
 }
 
-.hide {
+#hide {
     display: none;
 }
 
@@ -24,8 +47,74 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    /*border: 2px solid;*/
+    justify-content: center;
+    border: 5px solid;
     padding: 15px;
-    margin: 5px;
+    margin: 40px;
+    background-color: wheat;
+    font-size: xxx-large;
+    width: 50%;
+}
+
+.player-vs-computer {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    gap: 15px;
+    margin: 40px;
+}
+
+.player,
+.computer,
+.counter {
+    background-color: aquamarine;
+    border-radius: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    margin: 40px;
+    gap: 15px;
+    font-size: xx-large;
+    width: 100px;
+}
+
+img {
+    padding: 0px;
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+}
+
+.win,
+.lose {
+    border: 5px solid;
+    border-radius: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    font-size: xxx-large;
+    background-color: gold;
+    border-color: gold;
+}
+
+.lose {
+    background-color: crimson;
+    border-color: crimson;
+}
+
+.win-lose {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
 }
